@@ -7,9 +7,7 @@ print array.join(' ')
 puts ""
 for i in 0...array.length
   random = rand(number_of_times-i)+i 
-  temp = array[i]
-  array[i] = array[random]
-  array[random] = temp
+  array[i], array[random] = array[random], array[i]
 end
 
 print array.join(' ')
